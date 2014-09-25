@@ -20,7 +20,7 @@ class Bootlint(Linter):
     syntax = 'html'
     cmd = 'bootlint'
     regex = (
-        r'^.+?:\s' #filename
+        r'^.+?:\s'  # filename
         r'(?P<message>.+)'
     )
     tempfile_suffix = 'html'
