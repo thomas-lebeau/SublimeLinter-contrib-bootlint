@@ -3,7 +3,7 @@ SublimeLinter-contrib-bootlint
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-bootlint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-bootlint)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [bootlint](__linter_homepage__). It will be used with files that have the “html” syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface to [bootlint](https://github.com/twbs/bootlint). It will be used with files that have the “html” syntax.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
