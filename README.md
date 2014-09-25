@@ -23,7 +23,7 @@ Before using this plugin, you must ensure that `bootlint` is installed on your s
 1. If you are using `zsh` and `oh-my-zsh`, do not load the `nvm` plugin for `oh-my-zsh`.
 
 
-**Note:** This plugin requires `bootlint` __version__ or later.
+**Note:** This plugin requires `bootlint` 0.2.0 or later.
 
 ### Linter configuration
 In order for `bootlint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
