@@ -21,6 +21,7 @@ class Bootlint(Linter):
     cmd = 'bootlint'
     regex = (
         r'^.+?:\s'  # filename
+        r'(?:(?P<error>[E])|(?P<warning>[W]))\d+ '
         r'(?P<message>.+)'
     )
     tempfile_suffix = 'html'
