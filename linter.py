@@ -2,44 +2,34 @@
 # linter.py
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
-# Written by Thomas Lebeau
-# Copyright (c) 2014 Thomas Lebeau
+# Written by Patrick Ziegler
+# Copyright (c) 2015 Patrick Ziegler
 #
 # License: MIT
 #
 
 """This module exports the Bootlint plugin class."""
 
-from SublimeLinter.lint import Linter, util
+from SublimeLinter.lint import PythonLinter, util
 
 
-class Bootlint(Linter):
+class Bootlint(PythonLinter):
 
     """Provides an interface to bootlint."""
 
     syntax = 'html'
     cmd = 'bootlint'
+    version_args = '--version'
+    version_re = r'(?P<version>\d+\.\d+\.\d+)'
+    version_requirement = '>= 0.12.0'
     regex = (
-        r'^.+?:\s'  # filename
+        r'^.+?:'  # filename
+        r'(?P<line>\d+):(?P<col>\d+) '
         r'(?:(?P<error>[E])|(?P<warning>[W]))\d+ '
         r'(?P<message>.+)'
     )
+    multiline = True
+    line_col_base = (1, 1)
     tempfile_suffix = 'html'
     error_stream = util.STREAM_BOTH
-
-    def split_match(self, match):
-        """
-        Extract and return values from match.
-
-        We override this method because bootlint errors does not have
-        a line number so error can be placed at the beginning of the code.
-
-        """
-
-        match, line, col, error, warning, message, near = super().split_match(match)
-
-        if line is None and message:
-            line = 0
-            col = 0
-
-        return match, line, col, error, warning, message, near
+    check_version = True
