@@ -2,8 +2,11 @@
 # linter.py
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
-# Written by Patrick Ziegler
-# Copyright (c) 2015 Patrick Ziegler
+# Authors:
+# Thomas Lebeau
+# Patrick Ziegler
+#
+# Copyright (c) 2015
 #
 # License: MIT
 #
